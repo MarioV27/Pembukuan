@@ -10,9 +10,9 @@
   <meta content="" name="keywords">
 
   <style>
-    th:nth-child(4), th:nth-child(5), 
-    td:nth-child(4), td:nth-child(5) {
-        display: none;
+    th:nth-child(5),
+    td:nth-child(5) {
+      display: none;
     }
   </style>
   <!-- Favicons -->
@@ -298,7 +298,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Datatables</h5>
-            
+
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
@@ -307,7 +307,7 @@
                     <th>ID</th>
                     <th>Nama</th>
                     <th>Jumlah</th>
-                    <th></th>
+                    <th>Aksi</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -317,7 +317,11 @@
                     <td>{{$item->id}}</td>
                     <td>{{$item->nama}}</td>
                     <td>{{$item->jumlah}}</td>
-                    <td></td>
+                    <td>
+                      <a href="/kasKategoriview/{{$item->id}}">
+                        <button type="button" class="btn btn-primary rounded-pill">Lihat</button>
+                      </a>
+                    </td>
                     <td></td>
                   </tr>
                   @endforeach
@@ -359,11 +363,11 @@
   <script src="/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="/vendor/tinymce/tinymce.min.js"></script>
   <script src="/vendor/php-email-form/validate.js"></script>
-  
+
 
   <!-- Template Main JS File -->
   <script src="/main.js"></script>
-  
+
 </body>
 
 </html>

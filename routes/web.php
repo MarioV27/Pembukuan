@@ -92,6 +92,7 @@ Route::delete('/Piutang_Pengeluaran/hapusarr/{selectedItems}', [cPiutang_Pengelu
 //kas
 Route::get('/Kas', [cKas::class, 'kas']);
 Route::get('/kasKategori', [cKas::class, 'KasKategori']);
+Route::get('/kasKategoriview/{id}', [cKas::class, 'KasKategoriview']);
 Route::post('/wordTahun', [cWord::class, 'wordTahun']);
 Route::post('/word', [cWord::class, 'word']);
 //kategori
